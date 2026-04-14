@@ -144,3 +144,47 @@ MIT
 - [Cyton+Daisy Boards](https://shop.openbci.com/collections/frontpage/products/cyton-daisy-biosensing-boards-16-channel)
 - [GUI Widget Tutorial](https://docs.openbci.com/Software/OpenBCISoftware/GUIWidgets/#custom-widget)
 - [Run GUI from Processing IDE](https://docs.openbci.com/Software/OpenBCISoftware/GUIDocs/#running-the-openbci-gui-from-the-processing-ide)
+
+# OpenBCI GUI Custom Build and Release
+
+This repository contains a custom build of the OpenBCI GUI, including all source code, build scripts, and a pre-built Windows release package.
+
+## Features
+- All source code for the OpenBCI GUI, including custom modifications (e.g., Neuro11 UDP integration)
+- Build scripts for Windows, Mac, and Linux
+- Pre-built Windows release: `openbcigui_v6.0.0-beta.1_windows64.zip`
+
+## Quick Start
+
+### Run the Pre-built GUI (Windows)
+1. Download and extract `openbcigui_v6.0.0-beta.1_windows64.zip` from the repository.
+2. Inside the extracted folder, run `OpenBCI_GUI.exe`.
+
+### Build from Source
+1. Install [Processing 4.x](https://processing.org/download/).
+2. Clone this repository:
+   ```
+   git clone https://github.com/hiibrarahmad/openbci_gui_latest_work.git
+   cd openbci_gui_latest_work
+   ```
+3. Build the release (Windows):
+   ```
+   python release/build.py
+   python release/package.py
+   ```
+   The release zip will be created in the project root.
+
+## Folder Structure
+- `OpenBCI_GUI/` - Main Processing sketch and source code
+- `release/` - Build and packaging scripts
+- `openbcigui_v6.0.0-beta.1_windows64.zip` - Pre-built Windows release
+
+## Custom Modifications
+- Added Neuro11 UDP data source and board integration
+- See `PLAN_AND_CHANGES.md` for a summary of all changes and instructions
+
+## Contributing
+Pull requests are welcome! Please see `CONTRIBUTING.md` for guidelines.
+
+## License
+This project is licensed under the MIT License. See `LICENSE` for details.
